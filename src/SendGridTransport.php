@@ -132,13 +132,13 @@ class SendGridTransport implements Swift_Transport
 	public function prepareMail(Swift_Mime_SimpleMessage $message): SendGrid\Mail
 	{
 		// Get the first from email (SendGrid PHP library only seems to support one)
-		$fromArr = $this->mapRecipients($message->getFrom());
+		$fromArr = $this->mapRecipients($message->getFrom() ?? []);
 		$from = reset($fromArr);
 
-		$toArr = $this->mapRecipients($message->getTo());
-		$ccArr = $this->mapRecipients($message->getCc());
-		$bccArr = $this->mapRecipients($message->getBcc());
-		$attachments = $message->getChildren();
+		$toArr = $this->mapRecipients($message->getTo() ?? []);
+		$ccArr = $this->mapRecipients($message->getCc() ?? []);
+		$bccArr = $this->mapRecipients($message->getBcc() ?? []);
+		$attachments = $message->getChildren() ?? [];
 
 		$to = array_shift($toArr);
 
