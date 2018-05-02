@@ -1,0 +1,24 @@
+{
+	"name": "dakujem/sendgrid-swiftmailer",
+	"description": "Framework-agnostic SendGrid transport for Swift Mailer.",
+	"type": "library",
+	"authors": [
+		{
+			"name": "Andrej Rypák",
+			"email": "xrypak@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=7",
+		"sendgrid/sendgrid": "^6",
+		"swiftmailer/swiftmailer": "^6"
+	},
+	"require-dev": {
+		"sendgrid/sendgrid": "^6.2"
+	},
+	"autoload": {
+		"psr-4": {
+			"Dakujem\\SwiftGrid\\": "src/"
+		}
+	}
+}
