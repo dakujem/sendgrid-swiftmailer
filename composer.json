@@ -1,6 +1,8 @@
 {
 	"name": "dakujem/sendgrid-swiftmailer",
 	"description": "Framework-agnostic SendGrid transport for Swift Mailer.",
+	"keywords": ["swiftmailer", "sendgrid", "transport"],
+	"license": ["BSD-2-Clause", "MIT", "GPL-3.0-or-later", "GPL-2.0-or-later"],
 	"type": "library",
 	"authors": [
 		{
