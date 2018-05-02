@@ -4,12 +4,14 @@
 A framework-agnostic SendGrid transport for Swift Mailer.
 
 Installation:
+
 `$` `composer require dakujem/sendgrid-swiftmailer`
 
 Usage:
+
 ```php
 $transport = new Dakujem\SwiftGrid\SendGridTransport(getenv('SENDGRID_API_KEY'));
-$mailer = new Swift_Mailer(transport);
+$mailer = new Swift_Mailer($transport);
 ```
 
 For more information, visit:
@@ -22,4 +24,4 @@ For more information, visit:
 > Note:
 >
 > The code has been inspired by `expertcoder/swiftmailer-send-grid-bundle`,
-> but is more flexible and does not require symfony installation.
+> but is more flexible, works with newest SendGrid and Swift Mailer libs and does not require symfony installation.
